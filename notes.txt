@@ -1,0 +1,15 @@
+#Compiling and Executing program written in Assembly
+gcc -o blink blink_led.s -lwiringPi
+./blink
+
+#Compiling and Executing program written in C
+gcc -o blinkc blink_led.c -lwiringPi
+./blinkc
+
+#Executing program written in Python
+python3 blink_led.py
+
+#Mixing cpp and assembly
+as -o asm_file.o asm_file.s
+g++ -static -o exec_file file.cpp asm_file.o
+./exec_file
